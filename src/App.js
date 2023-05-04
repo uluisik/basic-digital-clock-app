@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
+import "animate.css";
 
 function App() {
   let time = new Date().toLocaleTimeString();
@@ -12,9 +13,10 @@ function App() {
   }
 
   setInterval(Time, 1000);
+
   return (
     <div className="App">
-      <h1>{currentTime}</h1>
+      <h1 class="animate__animated animate__bounceInDown">{currentTime}</h1>
     </div>
   );
 }
